@@ -7,4 +7,5 @@ def moveTower(height,fromPole, toPole, withPole):
 def moveDisk(fp,tp):
     print("moving disk from",fp,"to",tp)
 
-moveTower(4,"A","B","C")
+moveTower(7,"A","B","C")
+print((2**7)-1)
