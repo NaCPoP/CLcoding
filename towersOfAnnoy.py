@@ -1,8 +1,10 @@
-def method(height, tower1, twoer2, tower3):
-    height = 3
-    tower1 = 1
-    tower2 = 2
-    tower3 = 3
+def moveTower(height,fromPole, toPole, withPole):
+    if height >= 1:
+        moveTower(height-1,fromPole,withPole,toPole)
+        moveDisk(fromPole,toPole)
+        moveTower(height-1,withPole,toPole,fromPole)
 
-    def callmethod():
-        method(3,1,2,3)
+def moveDisk(fp,tp):
+    print("moving disk from",fp,"to",tp)
+
+moveTower(4,"A","B","C")
